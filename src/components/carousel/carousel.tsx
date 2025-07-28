@@ -66,6 +66,7 @@ const Carousel = ({ items, title }: CarouselProps) => {
               className="carousel-button prev" 
               onClick={() => updateIndex(activeIndex - 1)}
               disabled={activeIndex === 0}
+              aria-label="Previous"
             >
               &#10094;
             </button>
@@ -73,6 +74,7 @@ const Carousel = ({ items, title }: CarouselProps) => {
               className="carousel-button next" 
               onClick={() => updateIndex(activeIndex + 1)}
               disabled={activeIndex === maxIndex}
+              aria-label="Next"
             >
               &#10095;
             </button>
