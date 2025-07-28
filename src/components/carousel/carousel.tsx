@@ -2,6 +2,7 @@ import './carousel.scss';
 import { Link } from 'react-router-dom';
 import type { CarouselItem } from './carousel.types';
 import { useCarousel } from './use-carousel';
+import { Rating } from '../ui';
 
 interface CarouselProps {
   items: CarouselItem[];
@@ -47,10 +48,12 @@ const Carousel = ({ items, title }: CarouselProps) => {
                       <h3 className="movie-title">{item.title}</h3>
                       <div className="movie-meta">
                         <span className="movie-year">{item.year || "No Data"}</span>
-                        <div className="rating">
-                          <span className="star">★</span>
-                          <span className="rating-value">{item.rating || "N/A"}</span>
-                        </div>
+                        {item.rating && (
+                          <Rating rating={item.rating} />
+                        )}
+                        {!item.rating && (
+                          <span className="rating-fallback">N/A</span>
+                        )}
                       </div>
                     </div>
                   </div>

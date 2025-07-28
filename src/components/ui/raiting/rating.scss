@@ -1,0 +1,21 @@
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+
+  .star {
+    color: #ffd700;
+    font-size: 1rem;
+  }
+
+  .rating-value {
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .vote-count {
+    color: #ccc;
+    font-size: 0.85rem;
+  }
+}
