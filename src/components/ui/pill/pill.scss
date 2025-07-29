@@ -1,0 +1,18 @@
+.pill {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  margin: 2px;
+  background: #50545f;
+  color: white;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}

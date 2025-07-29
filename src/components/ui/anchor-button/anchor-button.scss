@@ -1,0 +1,40 @@
+.anchor-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #6366f1;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+  min-height: 44px;
+
+  &:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  }
+
+  // Sizes
+  &--small {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    min-height: 36px;
+  }
+
+  &--medium {
+    padding: 12px 24px;
+    font-size: 1rem;
+    min-height: 44px;
+  }
+
+  &--large {
+    padding: 16px 32px;
+    font-size: 1.125rem;
+    min-height: 52px;
+  }
+}

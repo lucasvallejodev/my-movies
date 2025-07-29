@@ -1,0 +1,55 @@
+.favorite-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+  min-height: 44px;
+
+  // Sizes
+  &--small {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    min-height: 36px;
+  }
+
+  &--medium {
+    padding: 12px 24px;
+    font-size: 1rem;
+    min-height: 44px;
+  }
+
+  &--large {
+    padding: 16px 32px;
+    font-size: 1.125rem;
+    min-height: 52px;
+  }
+
+  // States
+  &--add {
+    background: #10b981;
+    color: white;
+
+    &:hover {
+      background: #059669;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    }
+  }
+
+  &--remove {
+    background: #ef4444;
+    color: white;
+
+    &:hover {
+      background: #dc2626;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+    }
+  }
+}
