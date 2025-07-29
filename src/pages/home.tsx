@@ -39,6 +39,7 @@ function Home() {
 
   return (
     <div className="home-page">
+      <h1>Welcome to your list</h1>
       <Carousel items={actionMovies} title="Action" />
       <Carousel items={comedyMovies} title="Comedy" />
       <Carousel items={fantasyMovies} title="Fantasy" />
