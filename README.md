@@ -3,6 +3,8 @@
 
 A modern React application for browsing and discovering movies using The Movie Database (TMDB) API. Built with TypeScript, React Router, and Sass for a responsive and interactive movie browsing experience.
 
+You can check the demo project [here](https://my-movies-lucasvallejodev.vercel.app/). 😊
+
 ## 📸 Screenshots
 
 ### Home Page
