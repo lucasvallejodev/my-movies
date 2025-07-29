@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import type { CarouselItem } from '../components/carousel/carousel.types';
+import type { CarouselItem } from '../components';
 
 const FAVORITES_STORAGE_KEY = 'my-movies-favorites';
 

@@ -1,0 +1,21 @@
+.home-page {
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .loading-state,
+  .error-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+
+  .loading-state {
+    color: #fff;
+  }
+
+  .error-state {
+    color: #ff0000;
+  }
+}

@@ -1,6 +1,6 @@
-
-import Carousel from '../components/carousel/carousel';
-import { useMovies } from '../hooks/use-movies';
+import { useMovies } from '../../hooks/use-movies';
+import { Carousel } from '../../components';
+import './home.scss';
 
 function Home() {
   const { actionMovies, comedyMovies, fantasyMovies, loading, error } = useMovies();
@@ -8,13 +8,7 @@ function Home() {
   if (loading) {
     return (
       <div className="home-page">
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          alignItems: 'center', 
-          height: '200px',
-          color: '#fff'
-        }}>
+        <div className="loading-state">
           Loading movies...
         </div>
       </div>
@@ -24,13 +18,7 @@ function Home() {
   if (error) {
     return (
       <div className="home-page">
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          alignItems: 'center', 
-          height: '200px',
-          color: '#ff0000'
-        }}>
+        <div className="error-state">
           Error: {error}
         </div>
       </div>

@@ -1,13 +1,14 @@
+import './detail.scss';
 import { useParams } from 'react-router-dom';
 import { useMovieDetail } from '../../hooks/use-movie-detail';
 import { useFavorites } from '../../hooks/use-favorites';
-import { Rating, Pill, ProductionCompany, CollectionItem, AnchorButton, FavoriteButton } from '../../components/ui';
-import type { CarouselItem } from '../../components/carousel/carousel.types';
-import './detail.scss';
+import { Rating, Pill, ProductionCompany, CollectionItem, AnchorButton, FavoriteButton } from '../../components';
+import type { CarouselItem } from '../../components';
+import { TMDB_ORIGINAL_IMG_URL, TMDB_POSTER_IMG_URL, TMDB_LOGO_URL } from '../../config/env-variables';
 
-const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
-const POSTER_BASE_URL = import.meta.env.VITE_TMDB_POSTER_IMG_URL;
-const LOGO_BASE_URL = 'https://image.tmdb.org/t/p/w200';
+const IMAGE_BASE_URL = TMDB_ORIGINAL_IMG_URL;
+const POSTER_BASE_URL = TMDB_POSTER_IMG_URL;
+const LOGO_BASE_URL = TMDB_LOGO_URL;
 
 function Detail() {
   const { id } = useParams();

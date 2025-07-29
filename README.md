@@ -89,8 +89,10 @@ The application will be available at `http://localhost:5173`
 | Variable | Description | Required | Default Value |
 |----------|-------------|----------|---------------|
 | `VITE_TMDB_API_KEY` | Your TMDB API key for accessing movie data | ✅ Yes | - |
-| `VITE_TMDB_BASE_URL` | Base URL for TMDB API endpoints | ✅ Yes | `https://api.themoviedb.org/3` |
-| `VITE_TMDB_POSTER_IMG_URL` | Base URL for movie poster images | ✅ Yes | `https://image.tmdb.org/t/p/w500` |
+| `VITE_TMDB_BASE_URL` | Base URL for TMDB API endpoints | ❌ No | `https://api.themoviedb.org/3` |
+| `VITE_TMDB_POSTER_IMG_URL` | Base URL for movie poster images | ❌ No | `https://image.tmdb.org/t/p/w500` |
+| `VITE_TMDB_ORIGINAL_IMG_URL` | Base URL for movie detail images | ❌ No | `https://image.tmdb.org/t/p/original` |
+| `VITE_TMDB_LOGO_URL` | Base URL for movie companies logo images | ❌ No | `https://image.tmdb.org/t/p/w200` |
 
 ## 🧪 Available Scripts
 

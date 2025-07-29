@@ -1,9 +1,7 @@
 import './App.scss';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/header/header';
-import Home from './pages/home';
-import Favorites from './pages/favorites';
-import Detail from './pages/detail/detail';
+import { Header } from './components';
+import { Home, Favorites, Detail } from './pages';
 
 function App() {
   return (

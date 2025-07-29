@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react';
-import type { CarouselItem } from '../components/carousel/carousel.types';
-import type { Movie, MoviesResponse } from '../types/movies-api';
+import { TMDB_API_KEY, TMDB_BASE_URL, TMDB_POSTER_IMG_URL } from '../config/env-variables';
 
-const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
-const BASE_URL = import.meta.env.VITE_TMDB_BASE_URL;
-const IMAGE_BASE_URL = import.meta.env.VITE_TMDB_POSTER_IMG_URL;
+import type { CarouselItem } from '../components';
+import type { Movie, MoviesResponse } from '../types/movies-api';
 
 const ACTION_GENRE_ID = 28;
 const COMEDY_GENRE_ID = 35;
@@ -19,7 +17,7 @@ export const useMovies = () => {
 
   const fetchMoviesByGenre = async (genreId: number): Promise<Movie[]> => {
     try {
-      let url = `${BASE_URL}/discover/movie?sort_by=popularity.desc&with_genres=${genreId}&api_key=${API_KEY}`;
+      let url = `${TMDB_BASE_URL}/discover/movie?sort_by=popularity.desc&with_genres=${genreId}&api_key=${TMDB_API_KEY}`;
       
       const response = await fetch(url);
 
@@ -37,7 +35,7 @@ export const useMovies = () => {
     return apiMovies.map(movie => ({
       title: movie.title,
       desc: movie.overview || 'No description available',
-      image: movie.poster_path ? `${IMAGE_BASE_URL}${movie.poster_path}` : '/placeholder-image.jpg',
+      image: movie.poster_path ? `${TMDB_POSTER_IMG_URL}${movie.poster_path}` : '/placeholder-image.jpg',
       id: movie.id.toString(),
       year: movie.release_date ? new Date(movie.release_date).getFullYear().toString() : '',
       rating: Math.round(movie.vote_average * 10) / 10

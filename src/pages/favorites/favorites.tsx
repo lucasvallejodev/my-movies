@@ -1,6 +1,6 @@
 import './favorites.scss';
-import { useFavorites } from '../hooks/use-favorites';
-import Carousel from '../components/carousel/carousel';
+import { useFavorites } from '../../hooks/use-favorites';
+import { Carousel } from '../../components';
 
 function Favorites() {
   const { getAllFavorites, favoritesCount } = useFavorites();

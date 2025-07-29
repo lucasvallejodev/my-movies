@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { MovieDetail } from '../types/movies-api';
-
-const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
-const BASE_URL = import.meta.env.VITE_TMDB_BASE_URL;
+import { TMDB_API_KEY, TMDB_BASE_URL } from '../config/env-variables';
 
 export const useMovieDetail = (movieId: string | undefined) => {
   const [movieData, setMovieData] = useState<MovieDetail | null>(null);
@@ -20,7 +18,7 @@ export const useMovieDetail = (movieId: string | undefined) => {
         setLoading(true);
         setError(null);
         
-        const response = await fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`);
+        const response = await fetch(`${TMDB_BASE_URL}/movie/${movieId}?api_key=${TMDB_API_KEY}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch movie details: ${response.statusText}`);
         }
